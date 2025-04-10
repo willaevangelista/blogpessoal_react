@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
-import { AuthContext } from '../../contexts/AuthContexts';
+import { AuthContext } from '../../contexts/AuthContext';
 import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
