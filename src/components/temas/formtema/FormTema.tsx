@@ -60,7 +60,7 @@ function FormTema() {
         if (id !== undefined) {
             try {
                 await atualizar(`/temas`, tema, setTema, {
-                    headers: { 'Authorization': token }
+                    headers: { Authorization: token }
                 })
                 alert('O Tema foi atualizado com sucesso!')
             } catch (error: any) {
@@ -73,8 +73,9 @@ function FormTema() {
             }
         } else {
             try {
+                console.log(token)
                 await cadastrar(`/temas`, tema, setTema, {
-                    headers: { 'Authorization': token }
+                    headers: { Authorization: token }
                 })
                 alert('O Tema foi cadastrado com sucesso!')
             } catch (error: any) {
