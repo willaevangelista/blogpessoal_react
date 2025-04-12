@@ -73,7 +73,6 @@ function FormTema() {
             }
         } else {
             try {
-                console.log(token)
                 await cadastrar(`/temas`, tema, setTema, {
                     headers: { Authorization: token }
                 })
