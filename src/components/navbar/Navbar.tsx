@@ -1,14 +1,13 @@
 import { ReactNode, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import { cadastrarUsuario } from "../../services/Service";
 import { ToastAlerta } from "../../utils/ToastAlerta";
 
 function Navbar() {
 
     const navigate = useNavigate();
     
-    const { handleLogout } = useContext(AuthContext)
+    const { usuario, handleLogout } = useContext(AuthContext)
 
     function logout() {
 
@@ -19,7 +18,7 @@ function Navbar() {
 
     let component: ReactNode
 
-    if (cadastrarUsuario.token !== "") {
+    if (usuario.token !== "") {
         component = (
 
             <div className='w-full flex justify-center py-4
